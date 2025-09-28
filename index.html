@@ -1,15 +1,98 @@
 <!DOCTYPE HTML>
 <!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Richard Adam Personal Portfolio
+	Based on the Template: 
+		Read Only by HTML5 UP
+		html5up.net | @ajlkn
+		Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
 	<head>
-		<title>Read Only by HTML5 UP</title>
+		<title>Richard Henry Adam</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Modal Styles */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 1000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0,0,0,0.8);
+				backdrop-filter: blur(5px);
+			}
+
+			.modal-content {
+				background-color: #ffffff;
+				margin: 2% auto;
+				padding: 0;
+				border: none;
+				width: 90%;
+				max-width: 800px;
+				max-height: 90vh;
+				overflow-y: auto;
+				border-radius: 10px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+			}
+
+			.modal-header {
+				padding: 2em 2em 1em;
+				border-bottom: 1px solid #eee;
+				position: relative;
+			}
+
+			.modal-header h2 {
+				margin: 0 0 0.5em 0;
+				color: #333;
+			}
+
+			.modal-header h3 {
+				margin: 0;
+				color: #666;
+				font-size: 1.1em;
+			}
+
+			.modal-body {
+				padding: 2em;
+				line-height: 1.6;
+			}
+
+			.close {
+				color: #aaa;
+				position: absolute;
+				top: 1em;
+				right: 1em;
+				font-size: 28px;
+				font-weight: bold;
+				cursor: pointer;
+				transition: color 0.3s ease;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: #000;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 768px) {
+				.modal-content {
+					width: 95%;
+					margin: 5% auto;
+					max-height: 85vh;
+				}
+				
+				.modal-header,
+				.modal-body {
+					padding: 1.5em;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -26,24 +109,23 @@
 						<li><a href="#work_experience">Work Experience</a></li>
 						<li><a href="#project_experience">Projects</a></li>
 						<li><a href="#skills">Skills</a></li>
+						<li><a href="#publications">Publications</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
 				<footer>
+					<p>Non est ad astra mollis e terris via</p>
 					<ul class="icons">
 						<li>
 							<a href="https://www.linkedin.com/in/richard-adam/" class="icon brands fa-linkedin fa-2x" target="_blank" rel="noopener noreferrer">
-								<!-- <span class="label">LinkedIn</span> -->
 							</a>
 						</li>
 						<li>
 							<a href="https://github.com/radam1" class="icon brands fa-github fa-2x" target="_blank" rel="noopener noreferrer">
-								<!-- <span class="label">Github</span> -->
 							</a>
 						</li>
 						<li>
 							<a href="mailto:r.henryadam@gmail.com" class="icon solid fa-envelope fa-2x"></a>
-								<!-- <span class="label">Email</span> -->
 							</a>
 						</li>
 					</ul>
@@ -64,66 +146,222 @@
 								<div class="container">
 									<header class="major">
 										<h2>About Me</h2>
-										<p>Small Tagline</p>
 									</header>
-									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
+									<p>
+										I grew up in Santa Maria, California, where I got my first job as a field irrigator and eventually my first engineering internship working with automated 
+										weeding machines. My exposure to agricultural robotics and my passion for space led to work at USC's Space Engineering Research Center, where I 
+										worked on software for ISS-based RPO(Rendezvous and Proximity Operations) experiments. After an internship in JPLs robotics section field testing their 
+										Venus Aerobot mission 
+									</p>
 								</div>
 							</section>
 						<!-- Three -->
 							<section id="work_experience">
 								<div class="container">
 									<h3>Work Experience</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<p>From the farm to the International Space Station to the ocean, here's what I've worked on:</p>
 									<div class="features">
 										<article>
-											<a href="#" class="image"><img src="images/BlueRov2.jpg" alt="" /></a>
+											<a onclick="openModal('bubble-modal')" class="image"><img src="images/BlueRov2.jpg" alt="" /></a>
 											<div class="inner_half">
-												<h4>Robotic Software Intern</h4>
+												<h4><a onclick="openModal('bubble-modal')">Robotic Software Intern</a></h4>
 												<h5>Bubble Robotics | June 2025 - October 2025</h5>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p>Integrated Gazebo simulation framework for custom containerized ros2 C++/Python software for state estimation of commercial robot.</p>
+												<ul class="actions">
+													<li><a onclick="openModal('bubble-modal')" class="button small">Learn More</a></li>
+												</ul>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/clinger_testing.jpg" alt="" /></a>
+											<a onclick="openModal('clingers-modal')" class="image"><img src="images/cling_on_iss.jpg" alt="" /></a>
 											<div class="inner_half">
-												<h4>Lead C&DH Engineer</h4>
+												<h4><a onclick="openModal('clingers-modal')"></a>Lead C&DH Engineer</h4>
 												<h5>USC Space Engineering Research Center | June 2025 - October 2025</h5>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p>Created Python and Java/Android software for coordinating communication between ground operators, NASA's Astrobee robot, and CLINGERS RPO System.</p>
+												<ul class="actions">
+													<li><a onclick="openModal('clingers-modal')" class="button small">Learn More</a></li>
+												</ul>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/VenusAerobot.PNG" alt="" /></a>
+											<a onclick="openModal('jpl-modal')" class="image"><img src="images/VenusAerobot.PNG" alt="" /></a>
 											<div class="inner_half">
-												<h4>Robotic Technologist Intern</h4>
+												<h4><a onclick="openModal('jpl-modal')"></a>Robotic Technologist Intern</h4>
 												<h5>NASA Jet Propulsion Laboratory | June 2023 - August 2023</h5>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p>Spearheaded the full design of a field test for tether dynamics multiple configurations of a Venus Aerobot prototype.</p>
+												<ul class="actions">
+													<li><a onclick="openModal('jpl-modal')" class="button small">Learn More</a></li>
+												</ul>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/robocrop.png" alt="" /></a>
+											<a onclick="openModal('betteravia-modal')" class="image"><img src="images/robocrop.png" alt="" /></a>
 											<div class="inner_half">
-												<h4>Engineering Intern</h4>
-												<h5>Betteravia Farms | June 2023 - August 2023</h5>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<h4><a onclick="openModal('betteravia-modal')"></a>Engineering Intern</h4>
+												<h5>Betteravia Farms | June 2019 - August 2019</h5>
+												<p>Operated and eavluated automated weeding machinery across 7500 acres of farmland</p>
+												<ul class="actions">
+													<li><a onclick="openModal('betteravia-modal')" class="button small">Learn More</a></li>
+												</ul>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/eddie_on_a_tractor.JPG" alt="" /></a>
+											<a class="image"><img src="images/eddie_on_a_tractor.JPG" alt="" /></a>
 											<div class="inner_half">
 												<h4>Irrigator</h4>
-												<h5>Betteravia Farms | June 2023 - August 2023</h5>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<h5>Betteravia Farms | June 2017 - August 2018</h5>
+												<p>Loaded, hauled, and laid sprinkler pipe. That's pretty much it.</p>
 											</div>
 										</article>
 									</div>
 								</div>
 							</section>
 
+							<!-- Modal Structures -->
+							<div id="bubble-modal" class="modal">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal('bubble-modal')">&times;</span>
+										<h2>Robotic Software Intern</h2>
+										<h3>Bubble Robotics | June 2025 - October 2025</h3>
+									</div>
+									<div class="modal-body">
+										<div class="image fit" style="max-width: 600px; margin: 0 auto 2em;">
+											<img src="images/BlueRov2.jpg" alt="Blue ROV2" />
+										</div>
+										
+										<h4>Overview</h4>
+										<p>Detailed description of your work at Bubble Robotics. Developed sophisticated underwater robotics software systems, focusing on autonomous navigation and control algorithms for deep-sea exploration vehicles.</p>
+										
+										<h4>Key Responsibilities</h4>
+										<ul>
+											<li>Developed underwater robotics software using Python and C++</li>
+											<li>Implemented advanced control algorithms for autonomous underwater vehicles</li>
+											<li>Worked with ROS2 systems for real-time robot communication</li>
+											<li>Collaborated with hardware teams to integrate sensors and actuators</li>
+										</ul>
+										
+										<h4>Technologies Used</h4>
+										<ul class="feature-icons">
+											<li class="icon solid fa-code">Python, C++</li>
+											<li class="icon solid fa-robot">ROS2</li>
+											<li class="icon brands fa-linux">Linux</li>
+											<li class="icon solid fa-water">Underwater Systems</li>
+										</ul>
+										
+										<h4>Key Achievements</h4>
+										<p>Successfully implemented autonomous depth control system that improved navigation accuracy by 40%. Developed real-time obstacle avoidance algorithms for complex underwater environments.</p>
+									</div>
+								</div>
+							</div>
+
+							<div id="clingers-modal" class="modal">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal('clingers-modal')">&times;</span>
+										<h2>Lead Command and Data Handling Engineer</h2>
+										<h3>USC Space Engineering Research Center | June 2025 - October 2025</h3>
+									</div>
+									<div class="modal-body">
+										<div class="image fit" style="max-width: 600px; margin: 0 auto 2em;">
+											<img src="images/cling_on_iss.jpg" alt="CLINGERS" />
+										</div>
+										
+										<h4>Overview</h4>
+										<p></p>
+										
+										<h4>Key Responsibilities</h4>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										
+										<h4>Technologies Used</h4>
+										<ul class="feature-icons">
+											<li class="icon solid fa-code">Python, Java</li>
+											<li class="icon solid fa-robot">ROS1</li>
+											<li class="icon brands fa-linux">Linux</li>
+										</ul>
+										
+										<h4>Key Achievements</h4>
+										<p></p>
+									</div>
+								</div>
+							</div>
+
+							<div id="jpl-modal" class="modal">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal('jpl-modal')">&times;</span>
+										<h2>Robotic Technologist Intern</h2>
+										<h3>NASA Jet Propulsion Laboratory | June 2023 - August 2023</h3>
+									</div>
+									<div class="modal-body">
+										<div class="image fit" style="max-width: 600px; margin: 0 auto 2em;">
+											<img src="images/VenusAerobot.PNG" alt="Venus Aerobot" />
+										</div>
+										
+										<h4>Overview</h4>
+										<p></p>
+										
+										<h4>Key Responsibilities</h4>
+										<ul>
+											<li></li>
+										</ul>
+										
+										<h4>Technologies Used</h4>
+										<ul class="feature-icons">
+											<li class="icon solid fa-code">Python, C++</li>
+											<li class="icon solid fa-robot">ROS2</li>
+											<li class="icon brands fa-linux">Linux</li>
+										</ul>
+										
+										<h4>Key Achievements</h4>
+										<p></p>
+									</div>
+								</div>
+							</div>
+
+							<div id="betteravia-modal" class="modal">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal('betteravia-modal')">&times;</span>
+										<h2>Engineering Intern</h2>
+										<h3>Betteravia Farms | June 2019 - August 2019</h3>
+									</div>
+									<div class="modal-body">
+										<div class="image fit" style="max-width: 600px; margin: 0 auto 2em;">
+											<img src="images/robocrop.png" alt="Robocrop" />
+										</div>
+										
+										<h4>Overview</h4>
+										<p></p>
+										
+										<h4>Key Responsibilities</h4>
+										<ul>
+											<li></li>
+										</ul>
+										
+										<h4>Technologies Used</h4>
+										<ul class="feature-icons">
+											<li class="icon solid fa-code">Python, C++</li>
+											<li class="icon solid fa-robot">ROS2</li>
+											<li class="icon brands fa-linux">Linux</li>
+										</ul>
+										
+										<h4>Key Achievements</h4>
+										<p></p>
+									</div>
+								</div>
+							</div>
+
 						<!-- Project Experience -->
 							<section id="project_experience">
 								<div class="container">
 									<h3>Projects</h3>
-									<p>Besides the work experience I have, I also have been involved in various projects through school, clubs, or personal projects to build my skillset.</p>
+									<p>Besides my work experience, I also have been involved in various projects through schoolwork, clubs, or personal projects in order to build my skillset:</p>
 									<div class="features">
 										<article>
 											<div class="inner">
@@ -143,7 +381,52 @@
 												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 											</div>
 										</article>
+										<article>
+											<div class="inner">
+												<h4>Lunar Lander Simulation</h4>
+												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Convolutional Neural Net For Drone Racing</h4>
+												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Pulsed Plasma Thruster Electrical Design</h4>
+												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Mechanical Engineering Student Worker</h4>
+												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Matlab-Based Rocket Landing Controller</h4>
+												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											</div>
+										</article>
 									</div>
+								</div>
+							</section>
+
+						<!-- Education -->
+							<section id="education">
+								<div class="container">
+									<h3>Education</h3>
+									<h4>Delft University of Technology</h4>
+									<p>MSc Aerospace Engineering on Controls and Simulation Track<br>
+										Honours Programme Member<br>
+										GPA: 7.92 (equivalent to 4.0)</p>
+									<h4>University of Southern California</h4>
+									<p>BSc Astronautical Engineering, Minor in Entrepreneurship<br>
+									   Trustee Scholar and Viterbi Merit Research Fellow<br>
+									   GPA: 3.77</p>
 								</div>
 							</section>
 							
@@ -151,15 +434,49 @@
 							<section id="skills">
 								<div class="container">
 									<h3>Skills</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
+									<h4>Software</h4>
 									<ul class="feature-icons">
-										<li class="icon solid fa-code">Write all the code</li>
-										<li class="icon solid fa-cubes">Stack small boxes</li>
-										<li class="icon solid fa-book">Read books and stuff</li>
-										<li class="icon solid fa-coffee">Drink much coffee</li>
-										<li class="icon solid fa-bolt">Lightning bolt</li>
-										<li class="icon solid fa-users">Shadow clone technique</li>
+										<li class="icon solid fa-code">Python, MATLAB, C++</li>
+										<li class="icon brands fa-docker">Docker</li>
+										<li class="icon brands fa-linux">Linux, MacOS</li>
+										<li class="icon solid fa-network-wired">Embedded Software</li>
+										<li class="icon solid fa-robot">ROS2</li>
+										<li class="icon brands fa-github">git/Github</li>
 									</ul>
+
+									<h4>Mechanical</h4>
+									<ul class="feature-icons">
+										<li class="icon solid fa-cube">Solidworks, Fusion, NX</li>
+										<li class="icon solid fa-ruler">3D printing</li>
+										<li class="icon solid fa-cut">Laser Cutting</li>
+										<li class="icon solid fa-wrench">Machine Shop Tools</li>
+									</ul>
+
+									<h4>Electrical</h4>
+									<ul class="feature-icons">
+										<li class="icon solid fa-microchip">KiCAD</li>
+										<li class="icon solid fa-fire">Soldering</li>
+										<li class="icon solid fa-bolt">LTSpice</li>
+										<li class="icon brands fa-raspberry-pi">Microcontrollers/SBCs</li>
+									</ul>
+								</div>
+							</section>
+
+							<section id="publications">
+								<div class="container">
+									<h3>Publications</h3>
+									<h4> Enabling Safe Efficient Rendezvous: The value of Cooperative and Communicative RPO </h4>
+									<h5> International Astronautical Congress </h5>
+									<p>Barnhart, D., Topper, H., Lintala, P., Hill, J., Rajguru, A., Haq, S., Adam, H., Ebrahimi, M., and Deliwala, Y., “Enabling Safe Efficient Rendezvous: The value of Cooperative and Communicative RPO”, IAC-24,B6,IP,47,x81526, 75th International Astronautical Congress (IAC), Milan Italy, October 2024.</p>
+
+									<h4>Ablative Pulsed Plasma Thruster: Understanding Ablation Processes and Plasma Restrikes by Minimizing Current Backflow</h4>
+									<h5> American Institute of Aeronautics and Astronautics (AIAA) </h5>
+									<p>Pham, T., Adam, H., Byrne, B., Haq, S., Antypas, R., "Ablative Pulsed Plasma Thruster: Understanding Ablation Processes and Plasma Restrikes by Minimizing Current Backflow", AIAA 2024-85577, July 2024. https://doi-org.tudelft.idm.oclc.org/10.2514/6.2024-85577</p>
+
+									<h4>CLINGERS: Optimizing RPO Ease for Assembly Operations</h4>
+									<h5> AAS/AIAA Astrodynamics Specialist Conference </h5>
+									<p>Rajguru, A., Eyre, E., Ebrahimi, M., Barnhart, D., Adam, R., Griffith, T., Chibuzor, D., Haq, S., Nguyen, J., and Le, J., "CLINGERS: Optimizing RPO Ease for Assembly Operations", 2022 AAS/AIAA Astrodynamics Specialist Conference, Aug 7-11, 2022, AAS 22-580.</p>
+
 								</div>
 							</section>
 
@@ -538,5 +855,41 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+			// Modal functions
+			function openModal(modalId) {
+				document.getElementById(modalId).style.display = "block";
+				document.body.style.overflow = "hidden"; // Prevent background scrolling
+			}
+
+			function closeModal(modalId) {
+				document.getElementById(modalId).style.display = "none";
+				document.body.style.overflow = "auto"; // Restore background scrolling
+			}
+
+			// Close modal when clicking outside of it
+			window.onclick = function(event) {
+				const modals = document.querySelectorAll('.modal');
+				modals.forEach(modal => {
+					if (event.target === modal) {
+						modal.style.display = "none";
+						document.body.style.overflow = "auto";
+					}
+				});
+			}
+
+			// Close modal with Escape key
+			document.addEventListener('keydown', function(event) {
+				if (event.key === 'Escape') {
+					const modals = document.querySelectorAll('.modal');
+					modals.forEach(modal => {
+						if (modal.style.display === "block") {
+							modal.style.display = "none";
+							document.body.style.overflow = "auto";
+						}
+					});
+				}
+			});
+		</script>
 	</body>
 </html>
