@@ -233,7 +233,8 @@
 										</div>
 										
 										<h4>Overview</h4>
-										<p>As the sole intern for Bubble Robotics for the summer of 2025, I was responsible for turning the commercial BlueRov2 remote operated vehicle into 
+										<p>Working at Bubble, a Zurich-based startup, was an invaluable experience to level up my understanding of the tools roboticists use most often. 
+											As the sole intern for Bubble Robotics for the summer of 2025, I was responsible for turning the commercial BlueRov2 remote operated vehicle into 
 											a platform for autonomous operations by integrating a dockerized ROS2 software structure. In addition, I integrated the software into a Gazebo simulation 
 											to allow rapid testing of software by multiple employees. I then moved onto the state estimation for the robot, implementing a plug-and-play 
 											extended Kalman filter to allow for quick changes to the sensor stack on the robot. I integrated all of this into a CI/CD pipeline with GitHub Actions to 
@@ -249,11 +250,12 @@
 											<li>Architected a state estimation stack to be used with a varying set of sensors, including an INS and DVL</li>
 											<li>Created ROS2 nodes to integrate with sensor hardware using serial and network interfaces</li>
 											<li>Maintained and adapted CI/CD pipeline using GitHub Actions for automatic testing, building, and pushing of docker images</li>
+											<li>Created Bash setup script to configure base BlueRov2(robot) with necessary packages and software</li>
 										</ul>
 										
 										<h4>Technologies Used</h4>
 										<ul class="feature-icons">
-											<li class="icon solid fa-code">Python, C++</li>
+											<li class="icon solid fa-code">Python, C++, Bash</li>
 											<li class="icon solid fa-robot">ROS2</li>
 											<li class="icon brands fa-linux">Ubuntu</li>
 											<li class="icon brands fa-github">git, GitHub, and GitHub Actions</li>
@@ -278,25 +280,37 @@
 										</div>
 										
 										<h4>Overview</h4>
-										<p></p>
+										<p>My role as Control and Data Handling Engineer for the entire lifecycle of the CLINGERS project was easily 
+											my most formative engineering experience. As the C&DH Engineer, I was responsible for ensuring robust data flow between 
+											CLINGERS, our robot, Astrobee, NASA's free floating robot on the ISS, and operators on the ground. To this end, I 
+											built a serial communication architecture between the UART of the CLINGERS Raspberry Pi and the Astrobee's USB. On the CLINGERS 
+											side, I created a Python node for serial communication within CLINGERS' ZeroMQ-based publisher-subscriber software architecture. 
+											On the Astorbee side, I created an Android APK which took custom messages from the USB port and interfaced with Astrobee's 
+											ROS1-based software architecture. For testing on the in-house floatbots on the air-bearing table at USC, I ported my Java-based 
+											Android APK to python for replecable behavior. In addition, I architected the methodology of custom software uplaods as well as the
+											Raspberry Pi's overall scheduling using Systemd. After the system design phases, I also was heavily invovled in the testing phase 
+											for the entire software stack, so I worked on debugging software rannging from computer vision to multithreading to pulse width modulation
+											for servo motors. After launching the unit, I contributed to procedures documents that guided both ground crews and astronauts during 
+											experiments on the International Space Station. 
+										</p>
 										
-										<h4>Key Responsibilities</h4>
+										<h4>Key Responsibilities and Achievements</h4>
 										<ul>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
+											<li>Python-Based Serial communication code within custom ZeroMQ softare architecture of CLINGERS</li>
+											<li>Java-based Android APK for Serial Communication in ROS1 software architecture of Astrobee</li>
+											<li>Presented to NASA's Safety, Design Review, JPL, and Ames teams detailing communication design for a preliminary and critical design review</li>
+											<li>Collaborate closely with engineers from NASA Ames and CLINGERS team to ensure communication structure is consistent with internal software architecture</li>
+											<li>Drafting, reviewing, and conducting ongoing orbital operations procedures for ISS-based RPO experiments</li>
 										</ul>
 										
 										<h4>Technologies Used</h4>
 										<ul class="feature-icons">
 											<li class="icon solid fa-code">Python, Java</li>
 											<li class="icon solid fa-robot">ROS1</li>
-											<li class="icon brands fa-linux">Linux</li>
+											<li class="icon brands fa-linux">Linux (Raspbian)</li>
+											<li class="icon brands fa-android">Android</li>
+											<li class="icon brands fa-github">git and GitHub</li>
 										</ul>
-										
-										<h4>Key Achievements</h4>
-										<p></p>
 									</div>
 								</div>
 							</div>
@@ -315,18 +329,29 @@
 										</div>
 										
 										<h4>Overview</h4>
-										<p></p>
+										<p>
+											Working at JPL in the summer of 2023 showed me what robotics engineering is like at the highest level. 
+											My role revolved around a 10-week design sprint to create and test a platform for Venus Aerobot tether dynamics.
+											I rapid-prototyped a gondola structure, balloon cutdown and geofencing mechanism, and tether interface supporting 
+											multiple tether configurations. 
+										</p>
 										
 										<h4>Key Responsibilities</h4>
 										<ul>
+											<li>Design a platform for field testing of Venus Aerobot dynamics in multiple tether configurations</li>
+											<li>Design airtight 3D printed balloon inteface to allow cutdown</li>
+											<li>Integrate geofenced cutdown mechanism to comply with FAA regulations on balloon flight</li>
+											<li>Design custom pulleys to comply with FAA maximum strength limits</li>
+											<li>Contribute to active thermal control software in Python</li>
 											<li></li>
 										</ul>
 										
 										<h4>Technologies Used</h4>
 										<ul class="feature-icons">
-											<li class="icon solid fa-code">Python, C++</li>
-											<li class="icon solid fa-robot">ROS2</li>
-											<li class="icon brands fa-linux">Linux</li>
+											<li class="icon solid fa-block">Solidworks</li>
+											<li class="icon solid fa-robot">3D Printing</li>
+											<li class="icon brands fa-linux">Rapid Prototyping</li>
+											<li class="icon brands fa-linux">Active Thermal Control</li>
 										</ul>
 										
 										<h4>Key Achievements</h4>
@@ -349,22 +374,26 @@
 										</div>
 										
 										<h4>Overview</h4>
-										<p></p>
+										<p>My work as engineering intern for Betteravia Farms, after my summers as an irrigator, planted the seed of passion for automated machines and engineering.
+											I assisted the lead design engineer in his activities over the summer, which mostly included the organization and evaluation of 
+											automated weeding machines active over the 7500 acres(3000 hectares) of farmland. In addition, I completed ancillary tasks 
+											like integrating brakelight systems into tractors to make them street-legal, prototyping an automated spooling attachment for 
+											a tractor for post-harvest field preparation, and evaluating testing of various automated heavy machinery across the farm. 
+										</p>
 										
-										<h4>Key Responsibilities</h4>
+										<h4>Key Responsibilities and Achievements</h4>
 										<ul>
-											<li></li>
+											<li>Assist in the operation and organization of automated weeding across 7500 acres of farmland</li>
+											<li>Prototype automated spooling tractor attachment to increase post-harvest efficiency</li>
+											<li>Evaluate new automated weeding machines for potential purchase</li>
 										</ul>
 										
 										<h4>Technologies Used</h4>
 										<ul class="feature-icons">
-											<li class="icon solid fa-code">Python, C++</li>
-											<li class="icon solid fa-robot">ROS2</li>
-											<li class="icon brands fa-linux">Linux</li>
+											<li class="icon solid fa-wrench">Hand Tools</li>
+											<li class="icon solid fa-screwdriver">Power Tools</li>
+											<li class="icon brands fa-forklift">Heavy Machinery</li>
 										</ul>
-										
-										<h4>Key Achievements</h4>
-										<p></p>
 									</div>
 								</div>
 							</div>
@@ -377,50 +406,92 @@
 									<div class="features">
 										<article>
 											<div class="inner">
-												<h4>ROS2 Robotic Manipulator Project</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<h4>ROS2-based Robotic Manipulator</h4>
+												<p><b>Class:</b> Physical Interaction for Aerial and Space Robotics <br>
+												Developed ROS2 software in C++ and Python to control a 4DOF robotic arm in trajectory tracking and pick-and-place tasks
+											<br> <b><a href="https://github.com/radam1/AE4324_Manipulator_Code">Github Repository</a></b>
+										</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Extended Kalman Filter For Spacecraft</h4>
+												<p><b>Class:</b>Spacecraft Attitude Dynamics and Control<br>
+												Implemented Python-based Extended Kalman Filter to estimate the state, and PD controller to control nonlinear dynamics of simulated spacecraft in pointing mission
+											<br> <b><a href="https://github.com/radam1/Space_Attitude_Dynamics_and_Control">Github Repository</a></b>
+											</p>
+												
 											</div>
 										</article>
 										<article>
 											<div class="inner">
 												<h4>Distributed Multi-Agent Rendezvous with ADMM</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p><b>Class:</b>Networked and Distributed Control Systems<br>
+												Solved multi-robot rendezvous optimization problem with several optimization methods, including Alternating Direction Method of Multipliers, in Python
+												<br> <b><a href="https://github.com/radam1/SC42101_Networked_and_Distributed_Control_Systems">Github Repository(See Assignment 4)</a></b>
+												</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Swarm Contstruction of 2D Hexagonal Lattice Structure</h4>
+												<p><b>Class:</b>Bio-Inspired Intelligence for Aerospace Applications<br>
+												Constructed swarm-based lattice structure generation algorithm and conducted sensitivity analysis across several parameters in Python
+													<br> <b><a href="https://github.com/radam1/AE4350_Hexagonal_Swarm_Construction">Github Repository</a></b>
+												</p>
 											</div>
 										</article>
 										<article>
 											<div class="inner">
 												<h4>F16 Flight Controller Design</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p><b>Class:</b>Automatic Flight Control System Design<br>
+													Created MATLAB-based flight controller for F16 cruising and landing in low-altitude low-speed flight 
+													<br> <b><a href="https://github.com/radam1/AE4031P_FCS_Design_Project">Github Repository</a></b>
+												</p>
 											</div>
 										</article>
 										<article>
 											<div class="inner">
 												<h4>Lunar Lander Simulation</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p><b>Class:</b>Real-Time Distributed Flight and Space Simulation<br>
+												Created joystick input device and data logging code in C++ for lunar lander simulation group project 
+												</p>
 											</div>
 										</article>
 										<article>
 											<div class="inner">
 												<h4>Convolutional Neural Net For Drone Racing</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p><b>Class:</b>Artificial Intelligence for Aerospace Applications<br>
+												Created RCNN using PyTorch and PyTorch Lightning to identify gates from image data for drone racing applications
+												</p>
 											</div>
 										</article>
 										<article>
 											<div class="inner">
 												<h4>Pulsed Plasma Thruster Electrical Design</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p><b>Project:</b> USC Senior Design Project<br>
+												Designed electrical system for Ablative Pulsed Plasma Structure using KiCAD and simulated in 
+												LTSpice before conducting vacuum experiments to attempt to make a simple, low-cost($400) electric 
+												thruster for satellite operations
+												</p>
 											</div>
 										</article>
 										<article>
 											<div class="inner">
 												<h4>Mechanical Engineering Student Worker</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p><b>Club:</b> USC Rocket Propulsion Laboratory<br>
+												 Created a water deluge system in SolidWorks to control the temperature of a deflection plate on a liquid rocket engine test stand 
+												 and conducted materials trades for liquid test stand structure 
+												</p>
 											</div>
 										</article>
 										<article>
 											<div class="inner">
 												<h4>Matlab-Based Rocket Landing Controller</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<p><b>Class:</b>Introduction to Astronautics<br>
+												Formulated a Linear Quadratic Regulator in MATLAB to control a two-dimensional rocket landing 
+												with constrained thrust and fuel resources
+												</p>
 											</div>
 										</article>
 									</div>
@@ -495,24 +566,16 @@
 						<!-- Contact(may delete) -->
 							<section id="contact">
 								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
+									<div class="email-section">
+										<p><i>Feel free to reach out to me for any opportunities or questions!</i></p>
+										<h4>Email</h4>
+										<p><a href="mailto:r.henryadam@gmail.com" class="icon solid fa-envelope"> r.henryadam@gmail.com</a></p>
+										<h4>LinkedIn</h4>
+										<p><a href="https://www.linkedin.com/in/richard-adam/" class="icon brands fa-linkedin"> LinkedIn</a></p>
+									</div>
 								</div>
 							</section>
+							
 
 						<!-- Five -->
 						<!--
@@ -851,7 +914,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Design Template: <a href="http://html5up.net">HTML5 UP Read Only</a></li>
 							</ul>
 						</div>
 					</section>
