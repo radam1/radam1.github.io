@@ -92,6 +92,28 @@
 					padding: 1.5em;
 				}
 			}
+
+			.custom-icon {
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
+				width: 1.25em;
+				height: 1.25em;
+				text-align: center;
+				vertical-align: baseline;
+				margin-right: 0.5em;
+				object-fit: contain;
+			}
+
+			/* Make it behave exactly like FontAwesome icons */
+			.feature-icons li .custom-icon {
+				width: 1.25em;
+				text-align: center;
+				display: inline-block;
+				line-height: 1;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -163,6 +185,17 @@
 									<p>From the farm to the International Space Station to the ocean, here's what I've worked on:</p>
 									<div class="features">
 										<article>
+											<a onclick="openModal('samxl-modal')" class="image"><img src="images/RiskAM_Test.png" alt="" /></a>
+											<div class="inner_half">
+												<h4><a onclick="openModal('samxl-modal')">Robotic Software Intern</a></h4>
+												<h5>SAM-XL | November 2025 - Present</h5>
+												<p>Implementing cutting-edge cognitive modules into manufacturing robotics to increase safety in social environments</p>
+												<ul class="actions">
+													<li><a onclick="openModal('samxl-modal')" class="button small">Learn More</a></li>
+												</ul>
+											</div>
+										</article>
+										<article>
 											<a onclick="openModal('bubble-modal')" class="image"><img src="images/BlueRov2.jpg" alt="" /></a>
 											<div class="inner_half">
 												<h4><a onclick="openModal('bubble-modal')">Robotic Software Intern</a></h4>
@@ -219,6 +252,49 @@
 							</section>
 
 							<!-- Modals for Jobs -->
+							<div id="samxl-modal" class="modal">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal('samxl-modal')">&times;</span>
+										<h2>Robotic Software Intern</h2>
+										<h3>SAM-XL | November 2025 - Present</h3>
+										<h3>Delft, Netherlands</h3>
+									</div>
+									<div class="modal-body">
+										<div class="image fit" style="max-width: 600px; margin: 0 auto 2em;">
+											<img src="images/RiskAM_Test.png" alt="RiskAM Test" />
+										</div>
+										
+										<h4>Overview</h4>
+										<p>
+										   As Robotic Software Intern at SAM-XL(Smart Advanced Manufacturing with XL Robotics), my role is to 
+										   implement cutting edge ROS2 cognitive modules into manufacturing robots to make them more self aware and safer 
+										   for human interaction. As part of the Horizon Europe funded <a href="https://coresense.eu">CoreSense</a> Project,
+										   I work within a EU-wide community of robotics and AI researchers to bring advanced robotic awareness and 
+										   semantic-rich sensing to industry. 
+										</p>
+										
+										<h4>Key Responsibilities and Achievements</h4>
+										<ul>
+											<li>Adjust and Implement Reserach-Level Context Awareness Models for Risk Assessment in Industrial Robots</li>
+											<li>Create Dockerized Devcontainer Environment to Run ML Models on NVIDIA iGPUs and GPUs</li>
+											<li>Test Risk Assessment Software in Manufacturing Floor Environment</li>
+											<li>Improve Context and Semantic Awareness with Advanced Image Detection Models</li>
+										</ul>
+										
+										<h4>Technologies Used</h4>
+										<ul class="feature-icons">
+											<li class="icon solid fa-code">Python, C++, Bash</li>
+											<li class="icon solid fa-robot">ROS2 Jazzy</li>
+											<li class="icon solid fa-docker">Docker</li>
+											<li class="icon solid fa-fire">PyTorch, Torchvision</li>
+											<li class="icon solid fa-check">CI/CD Pipelines</li>
+											<li class="icon solid fa-github">Git, Github, Gitlab</li>
+											<li class="icon solid fa-brain">HuggingFace, Ultralytics</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 							<div id="bubble-modal" class="modal">
 								<div class="modal-content">
 									<div class="modal-header">
@@ -256,7 +332,7 @@
 										<h4>Technologies Used</h4>
 										<ul class="feature-icons">
 											<li class="icon solid fa-code">Python, C++, Bash</li>
-											<li class="icon solid fa-robot">ROS2</li>
+											<li class="icon solid fa-robot">ROS2 Jazzy</li>
 											<li class="icon brands fa-linux">Ubuntu</li>
 											<li class="icon brands fa-github">git, GitHub, and GitHub Actions</li>
 											<li class="icon brands fa-docker">docker</li>
@@ -505,7 +581,7 @@
 									<h4>Delft University of Technology</h4>
 									<p>MSc Aerospace Engineering on Controls and Simulation Track<br>
 										Honours Programme Member<br>
-										GPA: 7.92 (equivalent to 4.0)</p>
+										GPA: 8.0 (equivalent to 4.0)</p>
 									<h4>University of Southern California</h4>
 									<p>BSc Astronautical Engineering, Minor in Entrepreneurship<br>
 									   Trustee Scholar and Viterbi Merit Research Fellow<br>
@@ -519,7 +595,7 @@
 									<h3>Skills</h3>
 									<h4>Software</h4>
 									<ul class="feature-icons">
-										<li class="icon solid fa-code">Python, MATLAB, C++</li>
+										<li class="icon solid fa-code">Python, MATLAB, C++, Bash</li>
 										<li class="icon brands fa-docker">Docker</li>
 										<li class="icon brands fa-linux">Linux, MacOS</li>
 										<li class="icon solid fa-network-wired">Embedded Software</li>
